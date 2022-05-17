@@ -1,0 +1,29 @@
+package com.gd.login;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class MyServlets extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		System.out.println("MyServlets login get request server");
+		//
+		super.doGet(req, resp);
+		
+		RequestDispatcher rd=request.getRequestDispatcher("/home.jsp");  
+		//servlet2 is the url-pattern of the second servlet  
+		  
+		rd.forward(request, response);//method may be include or forward  
+		
+	}
+
+
+
+}
